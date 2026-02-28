@@ -29,7 +29,7 @@ int wordDet(wchar_t* str)
         }
         switch (str[i])
         {
-            case ' ': case '-': case '.': case ',': case '!': case '?': words++; break;
+            case ' ': case '-': case '.': case ',': case '!': case '?': case ':': case ';': words++; break;
         }
     }
     return 0;
@@ -43,7 +43,7 @@ int comb(wchar_t* str)
     {
         switch (str[i])
         {
-            case ' ': case '-': case '.': case ',': case '!': case '?':
+            case ' ': case '-': case '.': case ',': case '!': case '?': case ':': case ';':
             if (isInString(str[i - 1], conson) && isInString(str[i + 1], conson))
             {
                 counter++;
